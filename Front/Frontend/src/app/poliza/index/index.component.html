@@ -1,0 +1,26 @@
+<section>
+
+    <div class="d-flex justify-content-between">
+        <h4>List poliza</h4>
+        <a routerLink ="/poliza/create" class= "btn btn-succes">Nueva Póliza</a>
+    </div>
+
+    <br>
+
+    <table class= "table">
+        <tr>
+            <th>IdPoliza</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+        <tr *ngFor ="let poliza of polizas">
+            <td>{{poliza.idpoliza}}</td>
+            <td>{{poliza.producto}}</td>
+            <td>{{poliza.estado}}</td>
+            <a href="#" [routerLink]="['/poliza/', 'edit', poliza.idpoliza]" class= "btn btn-primary">Editar</a>
+            <button type="button" (click)="deletePoliza(poliza.idpoliza)" class= "btn btn-danger">Eliminar</a>
+            
+        </tr>
+    </table>
