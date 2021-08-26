@@ -20,7 +20,7 @@
             <td>{{poliza.producto}}</td>
             <td>{{poliza.estado}}</td>
             <a href="#" [routerLink]="['/poliza/', 'edit', poliza.idpoliza]" class= "btn btn-primary">Editar</a>
-            <button type="button" (click)="deletePoliza(poliza.idpoliza)" class= "btn btn-danger">Eliminar</a>
+            <button type="button" (click)="deletePoliza(poliza.idpoliza)" class= "btn btn-danger"></button><a>Eliminar</a>
             
         </tr>
     </table>
